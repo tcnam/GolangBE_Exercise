@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 func two_sum(nums []int, target int) []int {
+
 	var hash_map map[int]int = make(map[int]int)
+
 	for i := 0; i < len(nums); i++ {
 		j, ok := hash_map[target-nums[i]]
 		if ok {
@@ -16,6 +18,7 @@ func two_sum(nums []int, target int) []int {
 	return result
 }
 func main() {
+
 	var nums []int = []int{2, 7, 11, 15}
 	var target int = 9
 	fmt.Printf("%v", two_sum(nums, target))
